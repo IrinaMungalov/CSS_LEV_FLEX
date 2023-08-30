@@ -1,0 +1,28 @@
+/* reset/reboot */
+body {
+    margin: 0;
+    background-color: #122;
+}
+a {
+    text-decoration: none;
+}
+h2,h3 {
+    margin: 0;
+}
+svg {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* layout */
+.navbar {
+    background-color: #fff;
+}
+
+
+/* BRAND COMPONENT */
+.brand {
+    font-family: 'Raleway', sans-serif;
+    display: inline-block;
+}
