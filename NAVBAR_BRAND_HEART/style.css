@@ -1,0 +1,91 @@
+/* reset/reboot */
+body {
+    margin: 0;
+    background-color: #122;
+}
+a {
+    text-decoration: none;
+}
+h2,h3 {
+    margin: 0;
+}
+svg {
+    width: 100px;
+    height: 100px;
+}
+
+
+/* layout */
+.navbar {
+    background-color: #fff;
+}
+
+
+/* BRAND COMPONENT */
+.brand {
+    
+    font-family: 'Raleway', sans-serif;
+
+    display: inline-flex;
+    flex-direction: column;
+
+    --size: 1rem;
+    --color-light: #cc9966;
+    --color-mid: #996633;
+    --color-dark: #4d3319;
+    --color-heart: #ff3333;
+    
+}
+
+.brand svg {
+    order: -1;
+    height: calc(3 * var(--size) );
+    width: calc(3 * var(--size) );
+}
+.brand #hand {
+    fill: var(--color-dark);
+}
+.brand #heart {
+    fill: var(--color-heart);
+    animation: beat 2s 2;
+}
+.brand h2 {
+    font-size: calc(1.2 * var(--size) );
+    color: var(--color-dark);
+}
+.brand h3 {
+    font-size: calc(0.9 * var(--size) );
+    color: var(--color-light);
+}
+.brand div {
+    margin-left: calc(0.51 * var(--size) );
+}
+
+@keyframes beat {
+    from {opacity: 0;};
+    to {opacity: 1;}    
+}
+
+@media (min-width: 1000px) {
+    .brand {
+        flex-direction: row;
+        align-items: end;
+        flex-wrap: wrap;
+
+        --size: 1.2rem;
+    }
+    .brand svg {
+        order: -1;
+        height: calc(5 * var(--size) );
+        width: calc(5 * var(--size) );
+    }
+    .brand h2 {
+        font-size: calc(2 * var(--size) );
+    }
+    .brand h3 {
+        font-size: calc(1 * var(--size) );
+    }
+    .brand div {
+        margin-bottom: calc(0.6 * var(--size) );
+    }
+}
