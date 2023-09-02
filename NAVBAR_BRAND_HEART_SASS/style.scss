@@ -1,0 +1,85 @@
+$size: 1rem;
+$size-image: 100px;
+$color-light: #cc9966;
+$color-mid: #996633;
+$color-dark: #4d3319;
+$color-heart: #ff3333;
+
+body {
+    margin: 0;
+    background-color: #122;
+}
+a {
+    text-decoration: none;
+}
+h2,h3 {
+    margin: 0;
+}
+svg {
+    width: $size-image;
+    height: $size-image;
+}
+.navbar {
+    background-color: #fff;
+}
+.brand {
+    
+    font-family: 'Raleway', sans-serif;
+
+    display: inline-flex;
+    flex-direction: column;
+
+    svg {
+        order: -1;
+        height: 3 * $size;
+        width: 3 * $size;
+    }
+    #hand {
+        fill: $color-dark;
+    }
+    #heart {
+        fill: $color-heart;
+        animation: beat 2s 2;
+    }
+    h2 {
+        font-size: 1.2 * $size;
+        color: $color-dark;
+    }
+    h3 {
+        font-size: 0.9 * $size;
+        color: $color-light;
+    }
+    div {
+        margin-left: 0.51 * $size;
+    }
+    
+}
+@keyframes beat {
+    from {opacity: 0;};
+    to {opacity: 1;}    
+}
+
+@media (min-width: 1000px) {
+        .brand {
+            flex-direction: row;
+            align-items: end;
+            flex-wrap: wrap;
+
+            $size: 1.2rem;
+    
+            svg {
+            order: -1;
+            height: 5 * $size;
+            width: 5 * $size;
+            }
+            h2 {
+            font-size: 2 * $size;
+            }
+            h3 {
+            font-size: $size;
+            }
+            div {
+            margin-bottom: 0.6 * $size;
+            }
+        }
+}

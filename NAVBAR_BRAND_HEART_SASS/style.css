@@ -1,0 +1,80 @@
+body {
+  margin: 0;
+  background-color: #122;
+}
+
+a {
+  text-decoration: none;
+}
+
+h2, h3 {
+  margin: 0;
+}
+
+svg {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar {
+  background-color: #fff;
+}
+
+.brand {
+  font-family: "Raleway", sans-serif;
+  display: inline-flex;
+  flex-direction: column;
+}
+.brand svg {
+  order: -1;
+  height: 3rem;
+  width: 3rem;
+}
+.brand #hand {
+  fill: #4d3319;
+}
+.brand #heart {
+  fill: #ff3333;
+  animation: beat 2s 2;
+}
+.brand h2 {
+  font-size: 1.2rem;
+  color: #4d3319;
+}
+.brand h3 {
+  font-size: 0.9rem;
+  color: #cc9966;
+}
+.brand div {
+  margin-left: 0.51rem;
+}
+
+@keyframes beat {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (min-width: 1000px) {
+  .brand {
+    flex-direction: row;
+    align-items: end;
+    flex-wrap: wrap;
+  }
+  .brand svg {
+    order: -1;
+    height: 6rem;
+    width: 6rem;
+  }
+  .brand h2 {
+    font-size: 2.4rem;
+  }
+  .brand h3 {
+    font-size: 1.2rem;
+  }
+  .brand div {
+    margin-bottom: 0.72rem;
+  }
+}/*# sourceMappingURL=style.css.map */
