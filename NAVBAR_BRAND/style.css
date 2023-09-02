@@ -23,6 +23,73 @@ svg {
 
 /* BRAND COMPONENT */
 .brand {
+    
     font-family: 'Raleway', sans-serif;
-    display: inline-block;
+
+    display: inline-flex;
+    flex-direction: column;
+
+    --size: 1rem;
+    --color-light: #cc9966;
+    --color-mid: #996633;
+    --color-dark: #4d3319;
+    
+}
+
+.brand svg {
+    order: -1;
+    height: calc(3 * var(--size) );
+    width: calc(3 * var(--size) );
+}
+.brand #logo-human {
+    fill: var(--color-mid);
+}
+.brand #logo-arrow {
+    fill: var(--color-dark);
+    animation: up-down 1s 3;
+}
+.brand h2 {
+    font-size: calc(1.2 * var(--size) );
+    color: var(--color-dark);
+}
+.brand h3 {
+    font-size: calc(0.9 * var(--size) );
+    color: var(--color-light);
+}
+.brand div {
+    margin-left: calc(0.51 * var(--size) );
+}
+
+@keyframes up-down {
+    from {
+        transform: translateY(
+                    calc( 0.25 * var(--size))
+                    )
+    };
+    to {transform: translateY(0)
+    }    
+}
+
+@media (min-width: 1000px) {
+    .brand {
+        flex-direction: row;
+        align-items: end;
+        flex-wrap: wrap;
+
+        --size: 1.2rem;
+    }
+    .brand svg {
+        order: -1;
+        height: calc(5 * var(--size) );
+        width: calc(5 * var(--size) );
+    }
+    .brand h2 {
+        font-size: calc(2 * var(--size) );
+    }
+    .brand h3 {
+        font-size: calc(1 * var(--size) );
+    }
+    .brand div {
+        margin-bottom: calc(0.6 * var(--size) );
+    }
 }
